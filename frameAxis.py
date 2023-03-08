@@ -314,7 +314,8 @@ class FrameAxis:
             if len(save_path.split('/')) > 1:
                 output_dir = '/'.join(save_path.split('/')[:-1])
                 Path(output_dir).mkdir(parents=True, exist_ok=True)
-            fa_scores.to_csv(save_path, index=None, header=True)
+            fa_scores.drop(columns=["tweet_text"], inplace=True)
+            fa_scores.to_csv(save_path, mode="a", index=False, header=None)
             print('Moral Foundations FrameAxis scores saved to {}'.format(save_path))
         else:
             print('not saving the fa scores.')
