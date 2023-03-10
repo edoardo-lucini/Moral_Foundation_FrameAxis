@@ -20,9 +20,9 @@ WORD_EMEDDING_MODEL = "gensim-data\\word2vec-google-news-300\\word2vec-google-ne
 model = utils.setup_model(WORD_EMEDDING_MODEL)
 
 # paths and file names 
-OUT_CSV_PATH = "data-collection\\data\scores\\frame-axis\\{}-frame-axis.csv" # rembember to add the \{}.csv at the end
-IN_CSV_PATH = "data-collection\\data\\tweets\\{}.csv"
-FILE_NAMES = ["UKLabour-regular", "Conservatives-regular"] # names of file inside IN_CSV_PATH folder
+OUT_CSV_PATH = "data\\scores\\frame-axis\\{}-frame-axis.csv" # rembember to add the \{}.csv at the end
+IN_CSV_PATH = "data\\tweets\\{}.csv"
+FILE_NAMES = ["users-regular"] # names of file inside IN_CSV_PATH folder
 
 # headers 
 HEADERS = ["user_id","bias_fairness","bias_care","bias_loyalty","bias_authority","bias_sanctity",
